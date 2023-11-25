@@ -1,0 +1,24 @@
+{
+    "config": {
+      "flow_title": "{name} ({host})",
+      "step": {
+        "user": {
+          "description": "Setup Alpha Innotec.",
+          "data": {
+            "gateway_ip": "[%key:common::config_flow::data::gateway_ip%]",
+            "gateway_password": "[%key:common::config_flow::data::gateway_password%]",
+            "controller_ip": "[%key:common::config_flow::data::controller_ip%]",
+            "controller_username": "[%key:common::config_flow::data::controller_username%]",
+            "controller_password": "[%key:common::config_flow::data::controller_password%]"
+          }
+        }
+      },
+      "error": {
+        "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]"
+      },
+      "abort": {
+        "single_instance_allowed": "[%key:common::config_flow::abort::single_instance_allowed%]",
+        "unknown": "[%key:common::config_flow::error::unknown%]"
+      }
+    }
+  }
